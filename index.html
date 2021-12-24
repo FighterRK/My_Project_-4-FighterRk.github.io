@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- Basic Page Needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title> Rahul</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+   <!-- Mobile Specific Metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/layout.css">
+   <link rel="stylesheet" href="css/media-queries.css">
+   <link rel="stylesheet" href="css/magnific-popup.css">
+
+   <!-- Script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
+
+   <!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="data:image/png;base64,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" >
+
+</head>
+
+<body>
+
+   <!-- Header
+   ================================================== -->
+   <header id="home">
+
+      <nav id="nav-wrap">
+
+         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+         <ul id="nav" class="nav">
+            <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
+            <li><a class="smoothscroll" href="#about">About</a></li>
+	         <li><a class="smoothscroll" href="#resume">Resume</a></li>
+            <li><a class="smoothscroll" href="#portfolio">Services</a></li>
+            <li><a class="smoothscroll" href="#testimonials">Testimonials</a></li>
+            <li><a class="smoothscroll" href="#contact">Contact</a></li>
+         </ul> <!-- end #nav -->
+
+      </nav> <!-- end #nav-wrap -->
+
+      <div class="row banner">
+         <div class="banner-text">
+            <h1 class="responsive-headline">I'm Rahul.</h1>
+            <h3>I'm a beginner <span>Web Developer</span>, <span>Tech Specialist</span> and <span>a NOVICE</span> passionately curious to learn new Programming languages.
+                Let's <a class="smoothscroll" href="#about">start scrolling</a>
+            and learn more <a class="smoothscroll" href="#about">about me</a>.</h3>
+            <hr />
+            <ul class="social">
+               <li><a href="https://www.facebook.com/the.glitch.rahul/"><i class="fa fa-facebook"></i></a></li>
+               <li><a href="https://github.com/FighterRK"><i class="fab fa-github"></i></a></li>
+               <li><a href="https://www.linkedin.com/in/rahul-k-suresh-bb7933220/"><i class="fa fa-linkedin"></i></a></li>
+               <li><a href="https://www.instagram.com/rahul_the_glitch/"><i class="fa fa-instagram"></i></a></li>
+               
+               <li><a href="https://join.skype.com/invite/ua8GyCWoFld6"><i class="fa fa-skype"></i></a></li>
+            </ul>
+         </div>
+      </div>
+
+      <p class="scrolldown">
+         <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
+      </p>
+
+   </header> <!-- Header End -->
+
+
+   <!-- About Section
+   ================================================== -->
+   <section id="about">
+
+      <div class="row">
+
+         <div class="three columns">
+
+            <img class="profile-pic"  src="https://media-exp1.licdn.com/dms/image/C4E03AQHLGFi-mpqOVA/profile-displayphoto-shrink_400_400/0/1632120072891?e=1645660800&v=beta&t=7kGPRANXbD0oU12xyFQ10yHEJu54i51kHhuO4pd5WsE" alt="" />
+
+         </div>
+
+         <div class="nine columns main-col">
+
+            <h2>About Me</h2>
+
+            <p> I'm an Engineering Graduate, Specialised in Information Technology,As a recent college graduate, I know that what I'm lacking is career experience.
+               However, the qualifications that I bring cannot be measured by traditional experience.For starters, 
+               I have all the skills and I'm confident that I can make an immediate impact on your company.I'm currently contributing to self-projects,
+               learning new skills
+            </p>
+
+            <div class="row">
+
+               <div class="columns contact-details">
+
+                  <h2>Contact Details</h2>
+                  <p class="address">
+						   <span>Rahul K Suresh</span><br>
+						   <span>Kayyalakakathu Thekeathil<br>
+						         Manjadi P.O Thiruvalla,Pathanamthitta,Kerala,India
+                     </span><br>
+						   <span>(91)7510-8385-98</span><br>
+                     <span>anyone@website.com</span>
+					   </p>
+
+               </div>
+
+               <div class="columns download">
+                  <p>
+                     <a href="https://docs.google.com/document/d/1Fj9akxxisSCMB14VDnZ3mAXA2KjybL_ekWtLsC9eOCw/edit?usp=sharing" class="button"><i class="fa fa-download"></i>Download Resume</a>
+                  </p>
+               </div>
+
+            </div> <!-- end row -->
+
+         </div> <!-- end .main-col -->
+
+      </div>
+
+   </section> <!-- About Section End-->
+
+
+   <!-- Resume Section
+   ================================================== -->
+   <section id="resume">
+
+      <!-- Education
+      ----------------------------------------------- -->
+      <div class="row education">
+
+         <div class="three columns header-col">
+            <h1><span>Education</span></h1>
+         </div>
+
+         <div class="nine columns main-col">
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>College of Engineering and Management Punnapra
+                  </h3>
+                  <p class="info">B Tech in Information Technology <span>&bull;</span> <em class="date">September 2021</em></p>
+
+                  <p>
+                  I had Completed B Tech from College of Engineering and Management, Punnapra , Alapuzha. Under APJ Abdul Kalam Technological University,
+                  
+
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>Autodidactism</h3>
+                  <p class="info">Full Stack Development,Block-Chain Development,Flutter <span>&bull;</span> <em class="date">Currently</em></p>
+
+                  <p>
+                  Currently I'm self-studying on MEAN Full Stack Development & Block-Chain Development & Flutter Development.
+                  And passonate on exploring more domains 
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+
+         </div> <!-- main-col end -->
+
+      </div> <!-- End Education -->
+
+
+      <!-- Work
+      ----------------------------------------------- -->
+      <div class="row work">
+
+         <div class="three columns header-col">
+            <h1><span>Work</span></h1>
+         </div>
+
+         <div class="nine columns main-col">
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>Personal Website</h3>
+                  <p class="info"> <span>&bull;</span> <em class="date">Present</em></p>
+
+                  <p>
+                   You are currently viewing my current work,developed using CSS,Bootstrap,JS,HTML. 
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>Block-Chain Project</h3>
+                  <p class="info">Etherium,DApps,web3.js <span>&bull;</span> <em class="date">Ongoing</em></p>
+
+                  <p>
+                  Planning to explore block-chain domain
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+
+         </div> <!-- main-col end -->
+
+      </div> <!-- End Work -->
+
+
+      <!-- Skills
+      ----------------------------------------------- -->
+      <div class="row skill">
+
+         <div class="three columns header-col">
+            <h1><span>Skills</span></h1>
+         </div>
+
+         <div class="nine columns main-col">
+
+            <p>I'm passionately curious to learn
+            </p>
+
+				<div class="bars">
+
+				   <ul class="skills">
+					   <li><span class="bar-expand Programming" ></span><em>Programming Skills</em></li>
+                  <li><span class="bar-expand Web"></span><em>Web Development </em></li>
+						<li><span class="bar-expand App"></span><em>App-Development</em></li>
+						<li><span class="bar-expand css"></span><em>CSS</em></li>
+						<li><span class="bar-expand html5"></span><em>HTML5</em></li>
+                  <li><span class="bar-expand Block-Chain"></span><em>Blockchain</em></li>
+					</ul>
+
+				</div><!-- end skill-bars -->
+
+			</div> <!-- main-col end -->
+
+      </div> <!-- End skills -->
+
+   </section> <!-- Resume Section End-->
+
+
+   <!-- Portfolio Section
+   ================================================== -->
+   <section id="portfolio">
+
+      <div class="row">
+
+         <div class="twelve columns collapsed">
+
+            <h1>Check Out Some of My Service.</h1>
+
+            <!-- portfolio-wrapper -->
+            <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
+
+          	   <div class="columns portfolio-item ">
+                  
+                  <div class="item-wrap  ">
+                    
+                     <a href="#modal-01" title="" >
+                        <img src="https://devboattech.com/wp-content/uploads/2020/07/Web-development-designing-Anvar-Freelancer-1.png" alt="">
+                        <div class="overlay">
+                           
+                           <div class="portfolio-item-meta">
+          					      <h5>Web Development</h5>
+                              <p>Designer</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-02" title="">
+                        <img alt="" src="https://ect.co.in/wp-content/uploads/2016/04/Careers-in-Content-Writing.jpg">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Content Writing</h5>
+                              <p>Web </p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-03" title="">
+                        <img alt="" src="https://img.freepik.com/free-vector/system-administrator-illustration_277904-10316.jpg?size=626&ext=jpg">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>System Administration</h5>
+                              <p>Sysadmin</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-04" title="">
+                        <img alt="" src="https://www.eastrockhilltownship.org/media/2035/identity-theft.jpg">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>IT Consulting</h5>
+                              <p>Photography</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-05" title="">
+                        <img alt="" src="https://thumbs.dreamstime.com/b/server-icon-black-background-black-flat-style-vector-illustration-server-icon-black-background-black-flat-style-vector-170442730.jpg">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Server Support</h5>
+                              <p>
+                                 Server Maintenance</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-06" title="">
+                        <img alt="" src="https://static.vecteezy.com/system/resources/previews/002/693/473/non_2x/computer-repair-service-chalk-white-icon-on-black-background-installing-software-on-notebook-tech-support-for-electronics-laptop-problems-isolated-chalkboard-illustration-vector.jpg">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Developer</h5>
+                              <p>Programming</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-07" title="">
+                        <img alt="" src="images/portfolio/origami.jpg">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>App Development</h5>
+                              <p>Apps</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-08" title="">
+                        <img alt="" src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX32297415.jpg">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Blockchain Dev</h5>
+                              <p>App</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div>  <!-- item end -->
+
+            </div> <!-- portfolio-wrapper end -->
+
+         </div> <!-- twelve columns end -->
+
+
+         <!-- Modal Popup
+	      --------------------------------------------------------------- -->
+
+         <div id="modal-01" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-coffee.jpg" alt="" />
+
+		      <div class="description-box">
+			      <h4>Coffee Cup</h4>
+			      <p>
+                  I Create elegant websites <br>
+                  
+                  Responsive websites for various screens <br>
+                  
+                  Attractive user interfaces</p>
+               <span class="categories"><i class="fa fa-tag"></i>Branding, Webdesign</span>
+		      </div>
+
+            <div class="link-box">
+               
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-01 End -->
+
+         <div id="modal-02" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-console.jpg" alt="" />
+
+		      <div class="description-box">
+			      <h4>Content
+                  Writing</h4>
+			      <p>
+                  I write attractive content for the website.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Branding, Web Development</span>
+		      </div>
+
+            <div class="link-box">
+               
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-02 End -->
+
+         <div id="modal-03" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="https://wallpaperaccess.com/full/545591.jpg" alt="" />
+
+		      <div class="description-box">
+			      <h4>Sysadmin</h4>
+			      <p>Upkeep, configuration, and reliable operation of computer systems.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Admin</span>
+		      </div>
+
+            <div class="link-box">
+               
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-03 End -->
+
+         <div id="modal-04" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="https://www.scnsoft.com/managed-it-services/managed-it-support.svg" alt="" />
+
+		      <div class="description-box">
+			      <h4>IT consulting</h4>
+			      <p>Advisory services <br> 
+                  analyzing and diagnosing IT infrastructures, understanding a client's business needs, and designing and implementing a technology solution.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Consulting</span>
+		      </div>
+
+            <div class="link-box">
+               
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-04 End -->
+
+         <div id="modal-05" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="https://images.unsplash.com/photo-1560732488-6b0df240254a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" />
+
+		      <div class="description-box">
+			      <h4>Server support</h4>
+			      <p>maintaining the server and desktop infrastructure.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Suport</span>
+		      </div>
+
+            <div class="link-box">
+               
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-05 End -->
+
+         <div id="modal-06" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="https://d3kqdc25i4tl0t.cloudfront.net/articles/content/545_983014_tech.hero.jpg"/>
+
+		      <div class="description-box">
+			      <h4>Developer</h4>
+			      <p>Builds and create software and applications.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Programming</span>
+		      </div>
+
+            <div class="link-box">
+               
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-06 End -->
+
+         <div id="modal-07" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-origami.jpg" alt="" />
+
+		      <div class="description-box">
+			      <h4>App</h4>
+			      <p>Mobile app developmen.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Flutter</span>
+		      </div>
+
+            <div class="link-box">
+               
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-07 End -->
+
+         <div id="modal-08" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX31647205.jpg" alt="" />
+
+		      <div class="description-box">
+			      <h4>Blockchain Dev</h4>
+			      <p>build applications based on blockchain architecture and protocol.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Web3.js</span>
+		      </div>
+
+            <div class="link-box">
+               
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-01 End -->
+
+
+      </div> <!-- row End -->
+
+   </section> <!-- Portfolio Section End-->
+
+
+   <!-- Call-To-Action Section
+   ================================================== -->
+   <section id="call-to-action">
+
+      <div class="row">
+
+         <div class="two columns header-col">
+
+            <h1><span>Get Hosting.</span></h1>
+
+         </div>
+
+         <div class="seven columns">
+
+            <h2><span class="lead">About Me</span></h2>
+            <p><span class="lead"> I'm a aspirant with backlog,No-Experience,Especially No-Internships,who is struggling  to set my carrer,I spend my hours, practically every day, experimenting with HTML, CSS, and JavaScript;
+               and inhaling a wide variety of potentially useless information through Youtube,Git.. <br> Now I'm currently on to Blockchain,Flutter,Angular,React... <br>
+               In short a tech geek trying to gain extensive knowledge. I'm curious, and I enjoy work that challenges me to learn something new and stretch in a different direction.
+               So in case you are reading this and planning to hire me Remember "Bad Decisions Make Good Stories"
+
+            </span></p>
+
+         </div>
+
+         <div class="three columns action">
+
+
+
+         </div>
+
+      </div>
+
+   </section> <!-- Call-To-Action Section End-->
+
+
+   <!-- Testimonials Section
+   ================================================== -->
+   <section id="testimonials">
+
+      <div class="text-container">
+
+         <div class="row">
+
+            <div class="two columns header-col">
+
+               <h1><span>Testimonials</span></h1>
+
+            </div>
+
+            <div class="ten columns flex-container">
+
+               <div class="flexslider">
+
+                  <ul class="slides">
+
+                     <li>
+                        <blockquote>
+                           <p>He is a hard worker,with great quality,always try to set up things on time,During Our Final Year Project he showcased his true potential.
+                           </p>
+                           <cite>Muhammed Yaseen K <br> Developer XTG Technology</cite>
+                        </blockquote>
+                     </li> <!-- slide ends -->
+
+                     <li>
+                        <blockquote>
+                           <p>When it comes to work, he always try to stay up to it.Excellent personality always try to help others,his willingness to cooperate with others makes him unique
+                           </p>
+                           <cite>Hari Krishna  <br>Software Engineer at Accubits Technologies Inc</cite>
+                        </blockquote>
+                     </li> <!-- slide ends -->
+
+                  </ul>
+
+               </div> <!-- div.flexslider ends -->
+
+            </div> <!-- div.flex-container ends -->
+
+         </div> <!-- row ends -->
+
+       </div>  <!-- text-container ends -->
+
+   </section> <!-- Testimonials Section End-->
+
+
+   <!-- Contact Section
+   ================================================== -->
+   <section id="contact">
+
+         <div class="row section-head">
+
+            <div class="two columns header-col">
+
+               <h1><span>Get In Touch.</span></h1>
+
+            </div>
+
+            <div class="ten columns">
+
+                  <p class="lead">Hit me up <br> Friendship, Work, Collab...
+                  </p>
+
+            </div>
+
+         </div>
+
+         <div class="row">
+
+            <div class="eight columns">
+
+               <!-- form -->
+            
+               <form action="contactForm" method="post" id="contactForm" name="contactForm">
+					<fieldset>
+
+                  <div>
+						   <label for="contactName">Name <span class="required">*</span></label>
+						   <input type="text" value="" size="35" id="contactName" name="contactName">
+                  </div>
+
+                  <div>
+						   <label for="contactEmail">Email <span class="required">*</span></label>
+						   <input type="text" value="" size="35" id="contactEmail" name="contactEmail">
+                  </div>
+
+                  <div>
+						   <label for="contactSubject">Subject</label>
+						   <input type="text" value="" size="35" id="contactSubject" name="contactSubject">
+                  </div>
+
+                  <div>
+                     <label for="contactMessage">Message <span class="required">*</span></label>
+                     <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
+                  </div>
+
+                  <div>
+                     <button name="subm" class="submit ">Submit</button>
+
+                     <span id="image-loader">
+                        <img alt="" src="images/loader.gif">
+                     </span>
+                  </div>
+
+					</fieldset>
+				   </form> <!-- Form End -->
+
+               <!-- contact-warning -->
+               <div id="message-warning"> Error boy</div>
+               <!-- contact-success -->
+				   <div id="message-success">
+                  <i class="fa fa-check"></i>Your message was sent, thank you!<br>
+				   </div>
+
+            </div>
+
+
+            <aside class="four columns footer-widgets">
+
+               <div class="widget widget_contact">
+
+					   <h4>Address and Phone</h4>
+					   <p class="address">
+						   Rahul K Suresh<br>
+						   Kayyalakakathu Thekeathil <br>
+						   Manjadi P.O Thiruvalla,Pathanamthitta,Kerala,India<br>
+						   <span>(91)7510-8385-98 <br> 7012421278</span>
+					   </p>
+
+				   </div>
+
+               <div class="widget widget_tweets">
+
+                  <h4 class="widget-title">Stength</h4>
+
+                  <ul id="twitter">
+                     <li>
+                        <span>
+                           "When something is important enough, you do it even if the odds are not in your favor." <br> - Elon Musk
+                        
+                        </span>
+                        
+                     </li>
+                     <li>
+                        <span>
+                           “One of the only ways to get out of a tight box is to invent your way out.” <br> Jeff Bezos
+                        
+                        </span>
+                        
+                     </li>
+                  </ul>
+
+		         </div>
+
+            </aside>
+
+      </div>
+
+   </section> <!-- Contact Section End-->
+
+
+   <!-- footer
+   ================================================== -->
+   <footer>
+
+      <div class="row">
+
+         <div class="twelve columns">
+
+            <ul class="social-links">
+               <li><a href="https://www.facebook.com/the.glitch.rahul/"><i class="fa fa-facebook"></i></a></li>
+               <li><a href="https://github.com/FighterRK"><i class="fab fa-github"></i></a></li>
+               
+               <li><a href="https://www.linkedin.com/in/rahul-k-suresh-bb7933220/"><i class="fa fa-linkedin"></i></a></li>
+               <li><a href="https://www.instagram.com/rahul_the_glitch/"><i class="fa fa-instagram"></i></a></li>
+               
+               <li><a href="https://join.skype.com/invite/ua8GyCWoFld6"><i class="fa fa-skype"></i></a></li>
+            </ul>
+
+            <ul class="copyright">
+               <li>&copy; Copyright 2022 Rahul K Suresh</li>
+             
+            </ul>
+
+         </div>
+
+         <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
+
+      </div>
+
+   </footer> <!-- Footer End-->
+
+   <!-- Java Script
+   ================================================== -->
+   
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+
+   <script src="js/jquery.flexslider.js"></script>
+   <script src="js/waypoints.js"></script>
+   <script src="js/jquery.fittext.js"></script>
+   <script src="js/magnific-popup.js"></script>
+   <script src="js/init.js"></script>
+   <script src="https://kit.fontawesome.com/b14c046f00.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
